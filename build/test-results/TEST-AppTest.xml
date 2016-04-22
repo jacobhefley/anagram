@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-04-20T16:53:44" hostname="Jacobs-MacBook-Pro.local" time="0.296">
+<testsuite name="AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-04-21T21:54:05" hostname="Jacobs-MacBook-Pro.local" time="0.346">
   <properties/>
-  <testcase name="rootTest" classname="AppTest" time="0.289"/>
-  <testcase name="checkWinner_rock_true" classname="AppTest" time="0.003"/>
-  <system-out><![CDATA[2
-r
-]]></system-out>
-  <system-err><![CDATA[[Thread-4] INFO org.eclipse.jetty.util.log - Logging initialized @555ms
+  <testcase name="checkWinner_catEqualsCAT_false" classname="AppTest" time="0.003"/>
+  <testcase name="rootTest" classname="AppTest" time="0.327"/>
+  <testcase name="checkWinner_hatEqualsAt_false" classname="AppTest" time="0.0"/>
+  <testcase name="checkWinner_catEqualsAct_true" classname="AppTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Thread-4] INFO org.eclipse.jetty.util.log - Logging initialized @563ms
 [Thread-4] INFO spark.webserver.JettySparkServer - == Spark has ignited ...
 [Thread-4] INFO spark.webserver.JettySparkServer - >> Listening on 0.0.0.0:4567
 [Thread-4] INFO org.eclipse.jetty.server.Server - jetty-9.3.2.v20150730
-[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@7b4e77d2{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
-[Thread-4] INFO org.eclipse.jetty.server.Server - Started @621ms
+[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@788fd44d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+[Thread-4] INFO org.eclipse.jetty.server.Server - Started @628ms
 [Test worker] INFO spark.webserver.JettySparkServer - >>> Spark shutting down ...
-[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@7b4e77d2{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@788fd44d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
 [Test worker] INFO spark.webserver.JettySparkServer - done
 ]]></system-err>
 </testsuite>

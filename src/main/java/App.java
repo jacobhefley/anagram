@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.lang.Object;
 import java.util.Random;
 import java.lang.String;
+import java.util.Arrays;
 import spark.ModelAndView;
 import static java.lang.System.out;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -21,50 +22,29 @@ public class App {
     }, new VelocityTemplateEngine());
 
 
-    get("/winner", (request, response) -> {
+    get("/encrypted", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/winner.vtl");
+      model.put("template", "templates/encrypted.vtl");
 
       String sentence = request.queryParams("sentence");
-      Boolean winner = checkWinner(sentence);
+      String puzzle = makePuzzle(sentence);
 
-      model.put("winner", winner);
+      model.put("puzzle", puzzle);
+      model.put("sentence", sentence);
+
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
 
-  public static boolean checkWinner(String sentence) {
-    String answer = sentence;
-    Random rad = new Random();
+  public static String makePuzzle(String input) {
+    String userInput= input; // create instance of input variable to manipulate and return
+    String vowels[] = {"A","E","I","O","U","a","e","i","o","u"}; // array of all vowels
 
-    HashMap<Integer, String> maps = new HashMap<Integer, String>();
-      maps.put(0, "r");
-      maps.put(1, "p");
-      maps.put(2, "s");
-    System.out.println(rad.nextInt(3));
-
-    String randomPlayer = maps.get(rad.nextInt(3));
-    System.out.println(randomPlayer);
-
-    boolean returnValue = false;
-
-    switch(answer){
-      case "r": 
-        if(randomPlayer=="s"){
-          returnValue = true;
-        }
-        break;
-      case "p":
-        if(randomPlayer=="r"){
-          returnValue = true;
-        }
-        break;
-      case "s":
-        if(randomPlayer=="p"){
-          returnValue = true;
-        }
-        break;
-    }
-    return returnValue;
+    //iterate through the user inputed string and replaceAll voweles using the vowels array
+    // for(int i=0; i<userInput.length;i++){
+    //   userInput.replaceAll(vowels[i]);
+    // }
+userInput.replace('a','-');
+    return userInput;
   }
 }

@@ -19,17 +19,35 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
-  @Test
-  public void rootTest() {
-    goTo("http://localhost:4567/");
-    assertThat(pageSource()).contains("ROCK PAPER SCISSORS");
-  }
-
-  @Test
-  public void checkWinner_rock_true() {
-  App testGame = new App();
-  assertThat(testGame.checkWinner("r"));
-	}
+// @Test
+//   public void checkWinner_catEqualsAct_true() {
+//     assertEquals(true, App.checkWinner("act", "cat"));
+//   }
+//
+// @Test
+//   public void checkWinner_hatEqualsAt_false() {
+//     assertEquals(false, App.checkWinner("at", "hat"));
+//   }
+//
+// @Test
+//   public void checkWinner_catEqualsCAT_false() {
+//     assertEquals(false, App.checkWinner("CAT", "cat"));
+//   }
+//
+// @Test
+//   public void rootTest() {
+//     goTo("http://localhost:4567/");
+//     fill("#wordOne").with("cat");
+//     fill("#wordTwo").with("act");
+//     submit(".btn");
+//     assertThat(pageSource()).contains("true");
+// }
+  //
+  // @Test
+  // public void checkWinner_rock_true() {
+  // App testGame = new App();
+  // assertThat(testGame.checkWinner("r","r2"));
+	// }
  //  @Test
  //  public void checkWinner_paper_true() {
  //  App testGame = new App();
@@ -39,5 +57,5 @@ public class AppTest extends FluentTest {
  //  public void checkWinner_scissors_true() {
  //  App testGame = new App();
  //  assertEquals(true, testGame.checkWinner("s"));
-	// 
+	//
 }
